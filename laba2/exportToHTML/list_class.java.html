@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>list_class.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(98,151,85); font-style: italic; }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(204,120,50); }
+.s3 { color: rgb(104,151,187); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+list_class.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">/** 
+ * Created by Shadowside on 19.05.2016. 
+ */</span><span class="s1"> 
+</span><span class="s2">public class </span><span class="s1">list_class { 
+    </span><span class="s2">private </span><span class="s1">Node HeadElement</span><span class="s2">;</span><span class="s1"> 
+ 
+    </span><span class="s2">public void </span><span class="s1">add(Integer data){ 
+        </span><span class="s2">if</span><span class="s1">(HeadElement == </span><span class="s2">null</span><span class="s1">) { 
+            HeadElement = </span><span class="s2">new </span><span class="s1">Node(data)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">return;</span><span class="s1"> 
+        } 
+        tail().next = </span><span class="s2">new </span><span class="s1">Node(data)</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s2">private </span><span class="s1">Node tail() { 
+        Node tail = HeadElement</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(tail.next != </span><span class="s2">null</span><span class="s1">){ 
+            tail = tail.next</span><span class="s2">;</span><span class="s1"> 
+        } 
+        </span><span class="s2">return </span><span class="s1">tail</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s2">public int </span><span class="s1">get(</span><span class="s2">int </span><span class="s1">index) { 
+        Node current = HeadElement</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">int </span><span class="s1">count = </span><span class="s3">0</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(current != </span><span class="s2">null</span><span class="s1">){ 
+            </span><span class="s2">if</span><span class="s1">(count == index) </span><span class="s2">return </span><span class="s1">current.data</span><span class="s2">;</span><span class="s1"> 
+            count++</span><span class="s2">;</span><span class="s1"> 
+            current = current.next</span><span class="s2">;</span><span class="s1"> 
+        } 
+        </span><span class="s2">assert</span><span class="s1">(</span><span class="s2">false</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">return </span><span class="s3">0</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s2">private static class </span><span class="s1">Node { 
+        </span><span class="s2">private </span><span class="s1">Node next</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">private </span><span class="s1">Integer data</span><span class="s2">;</span><span class="s1"> 
+ 
+        </span><span class="s2">public </span><span class="s1">Node(Integer data) { 
+            </span><span class="s2">this</span><span class="s1">.data = data</span><span class="s2">;</span><span class="s1"> 
+        } 
+    } 
+} 
+</span></pre>
+</body>
+</html>
